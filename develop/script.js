@@ -1,84 +1,5 @@
 // Assignment Code
-var symbols = [
-  " ",
-  "!",
-  '"',
-  "#",
-  "$",
-  "%",
-  "&",
-  "'",
-  "(",
-  ")",
-  "*",
-  "+",
-  ",",
-  "-",
-  ".",
-  "/",
-  ";",
-  "<",
-  "=",
-  ">",
-];
-var Number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var Uppercase = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
-var lowercase = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
-var included = [];
+
 
 var generatePassword = function () {
   var userChoice = confirm("Would you like to generate a password?");
@@ -102,31 +23,108 @@ var generatePassword = function () {
     UseLower = confirm("would you like to include lowecase letters?");
     UseUpper = confirm("would you like to include uppercase letters?");
   }
-  function generatePassword() {
+    var Number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    var symbols = [
+      " ",
+      "!",
+      '"',
+      "#",
+      "$",
+      "%",
+      "&",
+      "'",
+      "(",
+      ")",
+      "*",
+      "+",
+      ",",
+      "-",
+      ".",
+      "/",
+      ";",
+      "<",
+      "=",
+      ">",
+    ];
+    var Number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     var included = [];
-    if (useNumbers) {
+    var Uppercase = [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z",
+    ];
+    var lowercase = [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i",
+      "j",
+      "k",
+      "l",
+      "m",
+      "n",
+      "o",
+      "p",
+      "q",
+      "r",
+      "s",
+      "t",
+      "u",
+      "v",
+      "w",
+      "x",
+      "y",
+      "z",
+    ];
+    if (UseNumbers) {
       included = included.concat(Number);
-    }
+    };
     if (UseSymbols) {
       included = included.concat(symbols);
-    }
+    };
     if (UseUpper) {
       included = included.concat(Uppercase);
-    }
+    };
     if (UseLower) {
       included = included.concat(lowercase);
-    }
+    };
     var password = "";
     for (var i = 0; i < PasswordLength; i++) {
-      var index = Math.floor(Math.random() * included.length);
-      password += included[index] + "";
-      return password;
-    }
-  }
+      password += included[Math.floor(Math.random() * included.length)];
+    };
+    console.log(included);
+    return password
+
 };
-console.log(password);
-console.log(included);
-console.log(generatePassword);
+var included = [];
 
 var generateBtn = document.querySelector("#generate");
 
