@@ -18,4 +18,4 @@ Start by clicking the Generate button and then follow the instructions in the wi
 
 ## Website Image
 
-![Image of the Oassword Generator website](assets\Images\Capture.PNG)
+![Image of the Oassword Generator website](assets/Images/Capture.PNG)
