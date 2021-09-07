@@ -1,4 +1,3 @@
-// Assignment Code
 
 
 var generatePassword = function () {
@@ -11,7 +10,7 @@ var generatePassword = function () {
   var PasswordLength = window.prompt(
     "How many characters would you like your password to be?"
   );
-
+//password length requirement
   if (PasswordLength < 8 || PasswordLength > 128) {
     window.alert(
       "The minimum password length is 8 and the maximum is 128, please try again."
@@ -104,6 +103,8 @@ var generatePassword = function () {
       "y",
       "z",
     ];
+
+    //Combining all selected criteria into a single array string
     if (UseNumbers) {
       included = included.concat(Number);
     };
@@ -121,6 +122,8 @@ var generatePassword = function () {
         "At least one criteria is required. Please try again"
       );
     }
+
+    //Randomly selecting a new string of values from the combined array
     if (UseLower || UseUpper || UseSymbols || UseNumbers) {
     var password = "";
     for (var i = 0; i < PasswordLength; i++) {
@@ -147,4 +150,3 @@ function writePassword() {
  // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// generatePassword()
