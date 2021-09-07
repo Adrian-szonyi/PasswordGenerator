@@ -116,12 +116,20 @@ var generatePassword = function () {
     if (UseLower) {
       included = included.concat(lowercase);
     };
+    if (!UseLower && !UseUpper && !UseSymbols && !UseNumbers) {
+      window.alert(
+        "At least one criteria is required. Please try again"
+      );
+    }
+    if (UseLower || UseUpper || UseSymbols || UseNumbers) {
     var password = "";
     for (var i = 0; i < PasswordLength; i++) {
       password += included[Math.floor(Math.random() * included.length)];
     };
     console.log(included);
     return password
+  }
+
 
 };
 var included = [];
